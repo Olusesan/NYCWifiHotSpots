@@ -7,9 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import "MyLocation.h"
 
-@interface ViewController : UIViewController
 
+@interface ViewController : UIViewController <MKMapViewDelegate>
+
+@property (weak, nonatomic) IBOutlet MKMapView *MapView;
+@property (strong, nonatomic) NSArray *locations;
+
+- (IBAction)zoomin:(id)sender;
+
+- (IBAction)changeMapType:(id)sender;
+
+-(void)PlotWifiLocation:(NSData *)responseData;
 
 @end
 
