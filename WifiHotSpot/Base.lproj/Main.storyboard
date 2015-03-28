@@ -33,21 +33,34 @@
                                 </items>
                             </toolbar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UoD-A8-lhp">
-                                <rect key="frame" x="0.0" y="54" width="600" height="502"/>
+                                <rect key="frame" x="0.0" y="130" width="600" height="426"/>
                                 <connections>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="MZy-AB-FaF"/>
                                 </connections>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NYC Free Wifi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwB-i9-ONE">
+                                <rect key="frame" x="104" y="72" width="392" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="vTM-Fc-l75"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9Gf-Hz-0JU" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="710-h0-uIY"/>
-                            <constraint firstItem="9Gf-Hz-0JU" firstAttribute="trailing" secondItem="UoD-A8-lhp" secondAttribute="trailing" id="BvF-qz-n7D"/>
-                            <constraint firstAttribute="trailing" secondItem="9Gf-Hz-0JU" secondAttribute="trailing" id="Ckn-Ls-ASx"/>
-                            <constraint firstItem="9Gf-Hz-0JU" firstAttribute="top" secondItem="UoD-A8-lhp" secondAttribute="bottom" id="IbQ-L9-jaU"/>
-                            <constraint firstItem="UoD-A8-lhp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Lgq-wR-whu"/>
-                            <constraint firstItem="UoD-A8-lhp" firstAttribute="leading" secondItem="9Gf-Hz-0JU" secondAttribute="leading" id="OQa-NX-hoL"/>
-                            <constraint firstItem="UoD-A8-lhp" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="54" id="iWu-kE-45n"/>
+                            <constraint firstItem="fwB-i9-ONE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="88" id="1cJ-ne-hpy"/>
+                            <constraint firstItem="9Gf-Hz-0JU" firstAttribute="top" secondItem="UoD-A8-lhp" secondAttribute="bottom" id="2Ay-ln-QTR"/>
+                            <constraint firstItem="UoD-A8-lhp" firstAttribute="top" secondItem="fwB-i9-ONE" secondAttribute="bottom" constant="13" id="4v0-tY-CpS"/>
+                            <constraint firstItem="fwB-i9-ONE" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="5rg-gx-Pf7"/>
+                            <constraint firstItem="UoD-A8-lhp" firstAttribute="centerX" secondItem="fwB-i9-ONE" secondAttribute="centerX" id="UX2-jd-JOG"/>
+                            <constraint firstItem="9Gf-Hz-0JU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="fI8-M0-vw9"/>
+                            <constraint firstAttribute="trailing" secondItem="9Gf-Hz-0JU" secondAttribute="trailing" id="hfP-kH-S46"/>
+                            <constraint firstItem="9Gf-Hz-0JU" firstAttribute="trailing" secondItem="UoD-A8-lhp" secondAttribute="trailing" id="jWE-6c-cez"/>
+                            <constraint firstItem="9Gf-Hz-0JU" firstAttribute="leading" secondItem="UoD-A8-lhp" secondAttribute="leading" id="oRE-eH-mrY"/>
+                            <constraint firstItem="9Gf-Hz-0JU" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="yeQ-iu-FXB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gGz-bH-x3E"/>
