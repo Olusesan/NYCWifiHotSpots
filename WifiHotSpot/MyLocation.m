@@ -18,7 +18,7 @@
 //    id userLocation = [MKMapView userLocation];
 
    
-
+// Create annotation objects
 
 - (id)initWithName:(NSString*)name address:(NSString*)address coordinate:(CLLocationCoordinate2D)coordinate {
     
@@ -46,6 +46,7 @@
     return _theCoordinate;
 }
 
+// Method to create an instance to represent location created
 - (MKMapItem*)mapItem {
 
     NSDictionary *addressDict = @{(NSString*)kABPersonAddressStreetKey : _address};
