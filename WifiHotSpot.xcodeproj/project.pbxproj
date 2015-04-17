@@ -33,6 +33,7 @@
 		BD61A4151AC4C77200D7AAA7 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = BD61A40C1AC4C77200D7AAA7 /* UIRefreshControl+AFNetworking.m */; };
 		BD61A4161AC4C77200D7AAA7 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = BD61A40E1AC4C77200D7AAA7 /* UIWebView+AFNetworking.m */; };
 		BD61A4191AC4CCA200D7AAA7 /* MyLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD61A4181AC4CCA200D7AAA7 /* MyLocation.m */; };
+		BDC5674D1ACA1736004A965A /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = BDC5674C1ACA1736004A965A /* locations.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		BD61A40E1AC4C77200D7AAA7 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		BD61A4171AC4CCA200D7AAA7 /* MyLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocation.h; sourceTree = "<group>"; };
 		BD61A4181AC4CCA200D7AAA7 /* MyLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLocation.m; sourceTree = "<group>"; };
+		BDC5674C1ACA1736004A965A /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				BD61A3BA1AC3136800D7AAA7 /* AppDelegate.m */,
 				BD61A3BC1AC3136800D7AAA7 /* ViewController.h */,
 				BD61A3BD1AC3136800D7AAA7 /* ViewController.m */,
+				BDC5674C1ACA1736004A965A /* locations.json */,
 				BD61A4171AC4CCA200D7AAA7 /* MyLocation.h */,
 				BD61A4181AC4CCA200D7AAA7 /* MyLocation.m */,
 				BD61A3BF1AC3136800D7AAA7 /* Main.storyboard */,
@@ -313,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC5674D1ACA1736004A965A /* locations.json in Resources */,
 				BD61A3C11AC3136800D7AAA7 /* Main.storyboard in Resources */,
 				BD61A3C61AC3136800D7AAA7 /* LaunchScreen.xib in Resources */,
 				BD61A3C31AC3136800D7AAA7 /* Images.xcassets in Resources */,
@@ -544,6 +548,7 @@
 				BD61A3D71AC3136800D7AAA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD61A3D81AC3136800D7AAA7 /* Build configuration list for PBXNativeTarget "WifiHotSpotTests" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +557,7 @@
 				BD61A3DA1AC3136800D7AAA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

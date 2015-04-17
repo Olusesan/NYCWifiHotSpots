@@ -39,7 +39,7 @@
                                 </connections>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NYC Free Wifi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwB-i9-ONE">
-                                <rect key="frame" x="104" y="72" width="392" height="45"/>
+                                <rect key="frame" x="113" y="42" width="392" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="vTM-Fc-l75"/>
@@ -51,11 +51,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fwB-i9-ONE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="88" id="1cJ-ne-hpy"/>
+                            <constraint firstItem="fwB-i9-ONE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="97" id="1cJ-ne-hpy"/>
                             <constraint firstItem="9Gf-Hz-0JU" firstAttribute="top" secondItem="UoD-A8-lhp" secondAttribute="bottom" id="2Ay-ln-QTR"/>
-                            <constraint firstItem="UoD-A8-lhp" firstAttribute="top" secondItem="fwB-i9-ONE" secondAttribute="bottom" constant="13" id="4v0-tY-CpS"/>
-                            <constraint firstItem="fwB-i9-ONE" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="5rg-gx-Pf7"/>
-                            <constraint firstItem="UoD-A8-lhp" firstAttribute="centerX" secondItem="fwB-i9-ONE" secondAttribute="centerX" id="UX2-jd-JOG"/>
+                            <constraint firstItem="UoD-A8-lhp" firstAttribute="top" secondItem="fwB-i9-ONE" secondAttribute="bottom" constant="43" id="4v0-tY-CpS"/>
+                            <constraint firstItem="fwB-i9-ONE" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="22" id="5rg-gx-Pf7"/>
+                            <constraint firstItem="UoD-A8-lhp" firstAttribute="centerX" secondItem="fwB-i9-ONE" secondAttribute="centerX" constant="-9" id="UX2-jd-JOG"/>
                             <constraint firstItem="9Gf-Hz-0JU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="fI8-M0-vw9"/>
                             <constraint firstAttribute="trailing" secondItem="9Gf-Hz-0JU" secondAttribute="trailing" id="hfP-kH-S46"/>
                             <constraint firstItem="9Gf-Hz-0JU" firstAttribute="trailing" secondItem="UoD-A8-lhp" secondAttribute="trailing" id="jWE-6c-cez"/>
@@ -71,24 +71,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1252" y="366"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="lxH-ID-wy5">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AQN-TC-4MZ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Oqa-u4-9Jk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="0kd-PX-Q96"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wkc-4C-Ht8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="440" y="1027"/>
         </scene>
     </scenes>
 </document>

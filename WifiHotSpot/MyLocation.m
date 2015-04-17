@@ -7,11 +7,17 @@
 //
 
 #import "MyLocation.h"
-#import "ViewController.h"
+//#import "ViewController.h"
 
 
 
 
+@interface MyLocation ()
+
+@property (nonatomic, readwrite) CLLocationCoordinate2D coordinate;
+//@property (nonatomic, readwrite) Locations *locationz;
+
+@end
 @implementation MyLocation
 
 //-(void)PlotWifiLocation {
@@ -21,7 +27,7 @@
 // Create annotation objects
 
 - (id)initWithName:(NSString*)name address:(NSString*)address coordinate:(CLLocationCoordinate2D)coordinate {
-    
+
     if ((self = [super init])) {
     if ([name isKindOfClass:[NSString class]]) {
         self.name = name;
@@ -47,19 +53,29 @@
 }
 
 // Method to create an instance to represent location created
-- (MKMapItem*)mapItem {
+//- (MKMapItem*)mapItem {
+//
+//    NSDictionary *addressDict = @{(NSString*)kABPersonAddressStreetKey : _address};
+//    
+//    MKPlacemark *placemark = [[MKPlacemark alloc]
+//                              initWithCoordinate:self.coordinate
+//                              addressDictionary:addressDict];
+//    
+//    MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
+//    mapItem.name = self.title;
+//    
+//    return mapItem;
+//}
 
-    NSDictionary *addressDict = @{(NSString*)kABPersonAddressStreetKey : _address};
-    
-    MKPlacemark *placemark = [[MKPlacemark alloc]
-                              initWithCoordinate:self.coordinate
-                              addressDictionary:addressDict];
-    
-    MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
-    mapItem.name = self.title;
-    
-    return mapItem;
-}
+//@synthesize coordinate = _coordinate;
+//
+//- (instancetype)initWithLocation:(Locations *)locationz{
+//    
+//    if (self = [super init]) {
+//        self.locationz = locationz;
+//        self.coordinate = CLLocationCoordinate2DMake (locationz.)
+//    }
+//}
 
 
 

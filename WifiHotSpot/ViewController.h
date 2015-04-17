@@ -15,12 +15,13 @@
 
 @property (weak, nonatomic) IBOutlet MKMapView *MapView;
 @property (strong, nonatomic) NSArray *locations;
+@property (nonatomic, strong) NSDictionary *row;
 
 - (IBAction)zoomin:(id)sender;
 
 - (IBAction)changeMapType:(id)sender;
 
--(void)PlotWifiLocation:(NSData *)responseData;
+-(void)PlotWifiLocation;
 
 @end
 

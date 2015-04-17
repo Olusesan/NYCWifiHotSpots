@@ -19,27 +19,39 @@
     [super viewDidLoad];
     _MapView.showsUserLocation = YES;
     _MapView.delegate = self;
+    
+//     Get locally stored loaction json data in app bundle and convert to type data
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"locations" ofType:@"json"];
+    NSData *data = [[NSData alloc]initWithContentsOfFile:path];
+    
+//   Covert json data into a dictionary. 
+    
+    self.row = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil]; NSLog(@"called yeah rite");
+    
+    [self PlotWifiLocation];
+    
+    
   
 //    Passing wifi location static json data from nyc.org
-    NSString *url = @"https://nycopendata.socrata.com/api/views/jd4g-ks2z/rows.json?accessType=DOWNLOAD";
+//    NSString *url = @"https://nycopendata.socrata.com/api/views/jd4g-ks2z/rows.json?accessType=DOWNLOAD";
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
-    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        if (response !=nil) {
-            
-            id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-            self.locations = object[@"data"];
-            NSLog(@"%@", object);
-            
-        }
-        else {
-            self.title = @"No data";
-            NSLog(@"No data");
-        }
-    }];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+//    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+//        if (response !=nil) {
+    
+//            id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+//            self.locations = object[@"data"];
+//            NSLog(@"%@", object);
+    
+//        }
+//        else {
+//            self.title = @"No data";
+//            NSLog(@"No data");
+//        }
+//    }];
     
 }
-        
+    
     
     // Do any additional setup after loading the view, typically from a nib.
 
@@ -102,17 +114,18 @@
 }
 
 // Passing json data received into map view
--(void)PlotWifiLocation:(NSData *)responseData {
+-(void)PlotWifiLocation {
     
-    NSArray *data = self.locations;
+    NSArray *data = self.row[@"row"];
     
-    for (NSArray *row in data) {
+    for (NSDictionary *wifidct in data) {
         
 //        obtain latitude,longitude and address from array created
-        NSNumber *latitude = [[row objectAtIndex:14]objectAtIndex:15];
-        NSNumber *longitude = [[row objectAtIndex:16]objectAtIndex:17];
-        NSString *locationname = [row objectAtIndex:12];
-        NSString *address =[row objectAtIndex:13];
+        NSDictionary *shapedict = wifidct [@"shape"];
+        NSNumber *latitude = shapedict [@"latitude"];
+        NSNumber *longitude = shapedict [@"longitude"];
+        NSString *locationname = wifidct [@"name"];
+        NSString *address = wifidct [@"address"];
         
 //  Assign data obtained into map view
         CLLocationCoordinate2D coordinate;
@@ -125,7 +138,7 @@
         
     }
     
-    [self PlotWifiLocation:responseData];
+//    [self PlotWifiLocation:responseData];
 
 }
 @end

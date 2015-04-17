@@ -12,6 +12,7 @@
 #import "ViewController.h"
 
 
+
 @interface MyLocation : NSObject <MKAnnotation>
 
 @property (nonatomic, copy) NSString *name;
@@ -20,8 +21,10 @@
 
 - (id)initWithName:(NSString*)name address:(NSString*)address coordinate:(CLLocationCoordinate2D)coordinate;
 
-- (MKMapItem*)mapItem;
-
-
+//- (MKMapItem*)mapItem;
+//@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+//@property (nonatomic, readonly) Locations *locationz;
+//
+//- (instancetype)initWithLocation:(Locations *)locationz;
 
 @end
