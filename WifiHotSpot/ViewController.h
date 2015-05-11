@@ -17,7 +17,8 @@
 @property (strong, nonatomic) NSArray *locations;
 @property (nonatomic, strong) NSDictionary *row;
 
-- (IBAction)zoomin:(id)sender;
+
+//- (IBAction)zoomin:(id)sender;
 
 - (IBAction)changeMapType:(id)sender;
 

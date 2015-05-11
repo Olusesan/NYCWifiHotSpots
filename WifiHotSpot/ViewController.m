@@ -11,14 +11,16 @@
 
 @interface ViewController ()
 
+@property (strong, nonatomic) CLLocationManager *locationManager;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _MapView.showsUserLocation = YES;
-    _MapView.delegate = self;
+//    _MapView.showsUserLocation = YES;
+//    _MapView.delegate = self;
     
 //     Get locally stored loaction json data in app bundle and convert to type data
     NSString *path = [[NSBundle mainBundle] pathForResource:@"locations" ofType:@"json"];
@@ -28,27 +30,22 @@
     
     self.row = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil]; NSLog(@"called yeah rite");
     
+    self.locationManager = [[CLLocationManager alloc]init];
+    self.locationManager.delegate = self;
+    
+    
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
+    
+    [self.locationManager startUpdatingLocation];
+    NSLog(@"it haappened");
+    
     [self PlotWifiLocation];
     
     
   
-//    Passing wifi location static json data from nyc.org
-//    NSString *url = @"https://nycopendata.socrata.com/api/views/jd4g-ks2z/rows.json?accessType=DOWNLOAD";
-    
-//    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
-//    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-//        if (response !=nil) {
-    
-//            id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-//            self.locations = object[@"data"];
-//            NSLog(@"%@", object);
-    
-//        }
-//        else {
-//            self.title = @"No data";
-//            NSLog(@"No data");
-//        }
-//    }];
+
     
 }
     
@@ -62,11 +59,11 @@
 }
 
 //  Method to zoom into map display
-- (IBAction)zoomin:(id)sender {
-    MKUserLocation *userlocation = _MapView.userLocation;
-    MKCoordinateRegion  region = MKCoordinateRegionMakeWithDistance(userlocation.location.coordinate, 2000, 2000);
-    [_MapView setRegion:region animated:NO];
-}
+//- (IBAction)zoomin:(id)sender {
+//    MKUserLocation *userlocation = _MapView.userLocation;
+//    MKCoordinateRegion  region = MKCoordinateRegionMakeWithDistance(userlocation.location.coordinate, 2000, 2000);
+//    [_MapView setRegion:region animated:NO];
+//}
 
 // Method for toggling between standard and satellite view
 - (IBAction)changeMapType:(id)sender {

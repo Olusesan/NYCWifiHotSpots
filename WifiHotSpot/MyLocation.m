@@ -52,30 +52,7 @@
     return _theCoordinate;
 }
 
-// Method to create an instance to represent location created
-//- (MKMapItem*)mapItem {
-//
-//    NSDictionary *addressDict = @{(NSString*)kABPersonAddressStreetKey : _address};
-//    
-//    MKPlacemark *placemark = [[MKPlacemark alloc]
-//                              initWithCoordinate:self.coordinate
-//                              addressDictionary:addressDict];
-//    
-//    MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
-//    mapItem.name = self.title;
-//    
-//    return mapItem;
-//}
 
-//@synthesize coordinate = _coordinate;
-//
-//- (instancetype)initWithLocation:(Locations *)locationz{
-//    
-//    if (self = [super init]) {
-//        self.locationz = locationz;
-//        self.coordinate = CLLocationCoordinate2DMake (locationz.)
-//    }
-//}
 
 
 

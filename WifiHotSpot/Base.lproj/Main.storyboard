@@ -20,11 +20,6 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Gf-Hz-0JU">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem title="Zoom" id="IqU-5n-hYV">
-                                        <connections>
-                                            <action selector="zoomin:" destination="vXZ-lx-hvc" id="Kt8-hj-nrA"/>
-                                        </connections>
-                                    </barButtonItem>
                                     <barButtonItem title="Type" id="OOo-Vi-Jto">
                                         <connections>
                                             <action selector="changeMapType:" destination="vXZ-lx-hvc" id="LZY-Qt-3cY"/>
